@@ -135,7 +135,7 @@ ul.my-navigation li.active a:after {
 
 .my-slider-container {
 	position:relative;
-	overflow-x: none;
+	overflow-x: hidden;
 }
 
 .go-right {
