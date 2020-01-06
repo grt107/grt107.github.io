@@ -16,7 +16,7 @@ jQuery(function ($) {
 
 jQuery(function ($) {
     $.fn.myscroll = function (amount) {
-        amount = amount || 180;
+        amount = amount || 120;
         $(this).bind("DOMMouseScroll mousewheel", function (event) {
             var oEvent = event.originalEvent, 
                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
