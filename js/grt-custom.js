@@ -2,7 +2,7 @@ jQuery(function ($) {
     $.fn.moveright = function() {
         var mywidth = $(this).width() / 2;
         var pos = $(this).scrollLeft() + mywidth;
-        $(this).animate( { scrollLeft: pos }, 600 );
+        $(this).animate( { scrollLeft: pos }, 700 );
     }
 });
 
@@ -10,13 +10,13 @@ jQuery(function ($) {
     $.fn.moveleft = function() {
         var mywidth2 = $(this).width() / 2;
         var pos2 = $(this).scrollLeft() - mywidth2;
-        $(this).animate( { scrollLeft: pos2 }, 600 );
+        $(this).animate( { scrollLeft: pos2 }, 700 );
     }
 });
 
 jQuery(function ($) {
     $.fn.myscroll = function (amount) {
-        amount = amount || 120;
+        amount = amount || 700;
         $(this).bind("DOMMouseScroll mousewheel", function (event) {
             var oEvent = event.originalEvent, 
                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
