@@ -84,9 +84,19 @@
 					$('#myslider1').moveleft();
 				});
 
-				$("#myslider1").mousewheel(function(event, delta) {
-					this.scrollLeft -= (delta * 40);
-					event.preventDefault();
+				// $("#myslider1").mousewheel(function(event, delta) {
+				// 	this.scrollLeft -= (delta * 30);
+				// 	event.preventDefault();
+				// });
+
+				$('#myslider1').bind('mousewheel', function(e) {
+					e.preventDefault();
+    				if(e.originalEvent.wheelDelta / 120 > 0) {
+						$('#myslider1').moveleft();
+					}
+					else {
+						$('#myslider1').moveright();
+					}
 				});
 
 				$(document).keydown(function(e){
