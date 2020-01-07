@@ -76,6 +76,15 @@
 
 	<script>
 
+		$(window).bind('mousewheel DOMMouseScroll', function(event){
+			if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+				$('#myslider1').moveleft();
+			}
+			else {
+				$('#myslider1').moveright();
+			}
+		});
+
 		$(window).on("load", function() {
 			if ($(window).width() > 767) {
 				$('.go-right').on('click', function() {
@@ -90,16 +99,6 @@
 				// 	this.scrollLeft -= (delta * 30);
 				// 	event.preventDefault();
 				// });
-
-				$('#myslider1').bind('mousewheel', function(e) {
-					e.preventDefault();
-    				if(e.originalEvent.wheelDelta / 120 > 0) {
-						$('#myslider1').moveleft();
-					}
-					else {
-						$('#myslider1').moveright();
-					}
-				});
 
 				$(document).keydown(function(e){
 					if (e.which == 37 || e.which == 38) { 
