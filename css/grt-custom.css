@@ -397,4 +397,16 @@ ul.social-footer li a:hover {
 		padding-right:20px;
 	}
 
+	.about-page-container {
+		flex-direction: column;
+	}
+
+	.about-page-image {
+		width:100%;
+	}
+
+	.about-page-content {
+		width:100%;
+		padding:25px 0 0 0;
+	}
 }
