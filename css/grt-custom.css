@@ -167,7 +167,8 @@ ul.my-navigation li.active a:after {
 #myslider1 {
     width: 100vw; 
     height:calc(100vh - 113px); 
-    overflow-x:hidden; 
+	overflow-x:hidden; 
+	overflow-y: hidden;
     white-space: nowrap; 
     list-style: none; 
     padding: 0; 
