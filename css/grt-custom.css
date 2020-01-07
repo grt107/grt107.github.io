@@ -221,7 +221,7 @@ ul.social-footer li {
 }
 
 ul.social-footer li:not(:last-child) {
-	margin-right:8px;
+	margin-right:10px;
 }
 
 ul.social-footer li a {
