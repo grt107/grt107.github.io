@@ -14,20 +14,6 @@ jQuery(function ($) {
     }
 });
 
-jQuery(function ($) {
-    $.fn.myscroll = function (amount) {
-        amount = amount || 90;
-        $(this).bind("DOMMouseScroll mousewheel", function (event) {
-            var oEvent = event.originalEvent, 
-                direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
-                position = $(this).scrollLeft();
-            position += direction > 0 ? -amount : amount;
-            $(this).scrollLeft(position);
-            event.preventDefault();
-        })
-    };
-});
-
 /*------- Loader -------*/
 $(window).on("load", function() {
 	var myloader = $('.main-loader');
