@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-	color:#FFF;
+	color:#25ca7f;
 }
 
 header {
@@ -212,6 +212,10 @@ ul.my-navigation li.active a:after {
 	text-decoration: none;
 }
 
+.my-footer a:hover {
+	color:#25ca7f;
+}
+
 ul.social-footer {
 	margin:0;
 	padding:0;
@@ -237,7 +241,7 @@ ul.social-footer li a {
 }
 
 ul.social-footer li a:hover {
-	color: #FFF;
+	color: #25ca7f;
 }
 
 .container-small {
