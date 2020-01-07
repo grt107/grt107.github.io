@@ -71,22 +71,12 @@
 
  
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 	<script src="js/grt-custom.js"></script>
 
 	<script>
 
-		// $(window).bind('mousewheel DOMMouseScroll', function(event){
-		// 	if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-		// 		$('#myslider1').moveleft();
-		// 	}
-		// 	else {
-		// 		$('#myslider1').moveright();
-		// 	}
-		// });
 
 		$(window).on('wheel', function(event){
-
 			if(event.originalEvent.deltaY < 0){
 				$('#myslider1').moveleft();
 			}
@@ -104,11 +94,6 @@
 				$('.go-left').on('click', function() {
 					$('#myslider1').moveleft();
 				});
-
-				// $("#myslider1").mousewheel(function(event, delta) {
-				// 	this.scrollLeft -= (delta * 30);
-				// 	event.preventDefault();
-				// });
 
 				$(document).keydown(function(e){
 					if (e.which == 37 || e.which == 38) { 
