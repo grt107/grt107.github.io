@@ -14,7 +14,7 @@ html {
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	background-color: #FFF;
+	background-color: #000;
 	margin:0;
 	padding:58px 0 0 0;
 	height:calc(100vh - 113px);
@@ -25,7 +25,12 @@ img {
 }
 
 a {
-  color: #333;
+  color: #c4c4c4;
+  text-decoration: underline;
+}
+
+a:hover {
+	color:#FFF;
 }
 
 header {
@@ -35,7 +40,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 6;
-    background:#FFF;
+    background:#000;
 }
 
 .header-container {
@@ -72,12 +77,12 @@ ul.my-navigation li a {
 	text-transform: uppercase;
 	font-weight: 400;
 	position:relative;
-	color:#8a8a8a;
+	color:#c4c4c4;
 	transition: all 0.4s ease-in-out;
 }
 
 ul.my-navigation li a:hover {
-	color:#333;
+	color:#FFF;
 }
 
 ul.my-navigation li a:after {
@@ -87,7 +92,7 @@ ul.my-navigation li a:after {
 	left:0;
 	right:0;
 	height:1px;
-	background:#333;
+	background:#FFF;
 	opacity:0;
 	transition: opacity 0.4s ease-in-out;
 }
@@ -97,7 +102,7 @@ ul.my-navigation li a:hover:after {
 }
 
 ul.my-navigation li.active a {
-	color:#333;
+	color:#FFF;
 }
 
 ul.my-navigation li.active a:after {
@@ -108,7 +113,7 @@ ul.my-navigation li.active a:after {
 	right:0;
 	height:1px;
 	opacity:1;
-	background:#333;
+	background:#FFF;
 }
 
 .my-logo {
@@ -122,7 +127,7 @@ ul.my-navigation li.active a:after {
 }
 .my-logo img {
 	display: inline-block;
-	width:auto;
+	width:121px;
 	height:auto;
 	max-width:100%;
 }
@@ -155,7 +160,7 @@ ul.my-navigation li.active a:after {
 }
 
 .go-right i, .go-left i {
-	color:#e6e6e6;
+	color:#c4c4c4;
 	font-size:44px;
 	transition: all 0.4s ease-in-out;
 }
@@ -197,7 +202,7 @@ ul.my-navigation li.active a:after {
 
 .my-footer p {
 	font-size:15px;
-	color:#333;
+	color:#c4c4c4;
 	font-weight: 400;
 	margin:0;
 }
@@ -220,49 +225,17 @@ ul.social-footer li:not(:last-child) {
 }
 
 ul.social-footer li a {
-	color: #8a8a8a;
+	color: #c4c4c4;
 	display: inline-block;
 	font-size:22px;
 	transition: all 0.4s ease-in-out;
 }
 
 ul.social-footer li a:hover {
-	color: #333;
+	color: #FFF;
 }
 
 
-/* Mobile Version */
-
-@media (max-width:767px) {
-
-    body {
-        height:100%;
-    }
-
-    .go-left, .go-right {
-        display: none;
-    }
-
-    #myslider1 {
-        width:100%; 
-        height:auto;  
-        overflow-x:auto; 
-        white-space: normal; 
-    }
-
-    #myslider1 li { 
-        display: block; 
-        margin:0; 
-        padding:0; 
-    }
-
-    #myslider1 img { 
-        display:block; 
-        height:auto; 
-        width:100%; 
-    }
-
-}
 
 .container-small {
     display:block;
@@ -275,9 +248,9 @@ ul.social-footer li a:hover {
 .container-medium {
     display:block;
     margin: 0 auto;
-    padding-left:25px;
-    padding-right:25px;
-    max-width:1350px;
+    padding-left:50px;
+    padding-right:50px;
+    max-width:100%;
 }
 
 .about-page-container {
@@ -305,12 +278,12 @@ ul.social-footer li a:hover {
 .about-page-content p {
     font-size:18px;
     margin:0 0 15px 0;
-    color:#333;
+    color:#c4c4c4;
 }
 
 /* Preloader */
 .main-loader {
-    background: #FFF;
+    background: #000;
 	top:0;
 	left:0;
 	right:0;
@@ -340,7 +313,7 @@ ul.social-footer li a:hover {
 .dot {
     width: 10px;
     height: 10px;
-    border: 2px solid #000;
+    border: 2px solid #FFF;
     border-radius: 50%;
     display: inline-block;
     margin: 0 5px;
@@ -371,4 +344,49 @@ ul.social-footer li a:hover {
 .logo-loader {
 	width:137px;
 	height:auto;
+}
+
+/* Mobile Version */
+
+@media (max-width:1399px) {
+	.container-medium {
+		padding-left:25px;
+		padding-right:25px;
+	}
+}
+
+@media (max-width:767px) {
+
+    body {
+        height:100%;
+    }
+
+    .go-left, .go-right {
+        display: none;
+    }
+
+    #myslider1 {
+        width:100%; 
+        height:auto;  
+        overflow-x:auto; 
+        white-space: normal; 
+    }
+
+    #myslider1 li { 
+        display: block; 
+        margin:0; 
+        padding:0; 
+    }
+
+    #myslider1 img { 
+        display:block; 
+        height:auto; 
+        width:100%; 
+	}
+	
+	.container-medium {
+		padding-left:20px;
+		padding-right:20px;
+	}
+
 }
