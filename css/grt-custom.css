@@ -25,7 +25,7 @@ img {
 }
 
 a {
-  color: #cd5353;
+  color: #2f9064;
   text-decoration: underline;
 }
 
@@ -92,7 +92,7 @@ ul.my-navigation li a:after {
 	left:0;
 	right:0;
 	height:1px;
-	background:#cd5353;
+	background:#2f9064;
 	opacity:0;
 	transition: opacity 0.4s ease-in-out;
 }
@@ -113,7 +113,7 @@ ul.my-navigation li.active a:after {
 	right:0;
 	height:1px;
 	opacity:1;
-	background:#cd5353;
+	background:#2f9064;
 }
 
 .my-logo {
@@ -208,7 +208,7 @@ ul.my-navigation li.active a:after {
 }
 
 .my-footer a {
-	color:#cd5353;
+	color:#2f9064;
 	text-decoration: none;
 }
 
@@ -230,7 +230,7 @@ ul.social-footer li:not(:last-child) {
 }
 
 ul.social-footer li a {
-	color: #cd5353;
+	color: #2f9064;
 	display: inline-block;
 	font-size:22px;
 	transition: all 0.4s ease-in-out;
@@ -316,7 +316,7 @@ ul.social-footer li a:hover {
 .dot {
     width: 10px;
     height: 10px;
-    border: 2px solid #FFF;
+    border: 2px solid #2f9064;
     border-radius: 50%;
     display: inline-block;
     margin: 0 5px;
