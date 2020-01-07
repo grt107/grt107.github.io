@@ -14,7 +14,7 @@ html {
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	background-color: #000;
+	background-color: #222;
 	margin:0;
 	padding:58px 0 0 0;
 	height:calc(100vh - 113px);
@@ -25,7 +25,7 @@ img {
 }
 
 a {
-  color: #c4c4c4;
+  color: #cd5353;
   text-decoration: underline;
 }
 
@@ -40,7 +40,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 6;
-    background:#000;
+    background:#222;
 }
 
 .header-container {
@@ -92,7 +92,7 @@ ul.my-navigation li a:after {
 	left:0;
 	right:0;
 	height:1px;
-	background:#FFF;
+	background:#cd5353;
 	opacity:0;
 	transition: opacity 0.4s ease-in-out;
 }
@@ -113,7 +113,7 @@ ul.my-navigation li.active a:after {
 	right:0;
 	height:1px;
 	opacity:1;
-	background:#FFF;
+	background:#cd5353;
 }
 
 .my-logo {
@@ -207,6 +207,11 @@ ul.my-navigation li.active a:after {
 	margin:0;
 }
 
+.my-footer a {
+	color:#cd5353;
+	text-decoration: none;
+}
+
 ul.social-footer {
 	margin:0;
 	padding:0;
@@ -225,7 +230,7 @@ ul.social-footer li:not(:last-child) {
 }
 
 ul.social-footer li a {
-	color: #c4c4c4;
+	color: #cd5353;
 	display: inline-block;
 	font-size:22px;
 	transition: all 0.4s ease-in-out;
@@ -235,14 +240,12 @@ ul.social-footer li a:hover {
 	color: #FFF;
 }
 
-
-
 .container-small {
     display:block;
     margin: 0 auto;
     padding-left:25px;
     padding-right:25px;
-    max-width:1200px;
+    max-width:1330px;
 }
 
 .container-medium {
@@ -283,7 +286,7 @@ ul.social-footer li a:hover {
 
 /* Preloader */
 .main-loader {
-    background: #000;
+    background: #222;
 	top:0;
 	left:0;
 	right:0;
