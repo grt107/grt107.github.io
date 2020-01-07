@@ -399,6 +399,8 @@ ul.social-footer li a:hover {
 
 	.about-page-container {
 		flex-direction: column;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	.about-page-image {
