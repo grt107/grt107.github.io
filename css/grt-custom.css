@@ -177,7 +177,7 @@ ul.grt-menu li.active a:after {
 
 #myslider1 {
     width: 100%; 
-    height:calc(100vh - 113px); 
+    height:calc(100vh - 116px); 
 	overflow-x:hidden; 
 	overflow-y: hidden;
     white-space: nowrap; 
@@ -194,7 +194,7 @@ ul.grt-menu li.active a:after {
 
 #myslider1 img { 
     display:inline-block; 
-    height:calc(100vh - 113px); 
+    height:calc(100vh - 116px); 
     width:auto; 
 }
 
