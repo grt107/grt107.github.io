@@ -292,7 +292,8 @@ ul.social-footer li a:hover {
 .about-page-content p {
     font-size:18px;
     margin:0 0 15px 0;
-    color:#c4c4c4;
+	color:#c4c4c4;
+	line-height: 1.45;
 }
 
 .about-page-content h2 {
@@ -534,7 +535,7 @@ ul.social-footer li a:hover {
 
 	.about-page-content p {
 		font-size:17px;
-		line-height: 1.1;
+		line-height: 1.4;
 	}
 
 	.about-page-image iframe {
