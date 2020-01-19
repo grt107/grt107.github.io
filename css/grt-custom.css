@@ -295,6 +295,12 @@ ul.social-footer li a:hover {
     color:#c4c4c4;
 }
 
+.about-page-content h2 {
+    font-size:26px;
+    margin:0 0 15px 0;
+    color:#c4c4c4;
+}
+
 /* Preloader */
 .main-loader {
     background: #222;
@@ -520,6 +526,15 @@ ul.social-footer li a:hover {
 	.about-page-content {
 		width:100%;
 		padding:25px 0 0 0;
+	}
+
+	.about-page-content h2 {
+		font-size:22px;
+	}
+
+	.about-page-content p {
+		font-size:17px;
+		line-height: 1.1;
 	}
 
 	.my-footer {
