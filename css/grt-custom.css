@@ -137,8 +137,9 @@ ul.grt-menu li.active a:after {
 }
 .my-logo img {
 	display: inline-block;
-	width:116px;
+	width:118px;
 	height:auto;
+	margin-top:7px;
 	max-width:100%;
 }
 
