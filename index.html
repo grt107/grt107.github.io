@@ -75,19 +75,23 @@
 
  
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
+
+	
 	<script src="js/grt-custom.js"></script>
 
 	<script>
 
 
-		$(window).on('wheel', function(event){
-			if(event.originalEvent.deltaY < 0){
-				$('#myslider1').moveleft();
-			}
-			else {
-				$('#myslider1').moveright();
-			}
-		});
+		// $(window).on('wheel', function(event){
+		// 	if(event.originalEvent.deltaY < 0){
+		// 		$('#myslider1').moveleft();
+		// 	}
+		// 	else {
+		// 		$('#myslider1').moveright();
+		// 	}
+		// });
 
 		$(window).on("load", function() {
 			if ($(window).width() > 767) {
@@ -110,6 +114,40 @@
 					}
 				});
 			}
+		});
+
+
+		$(window).on("load", function() {
+			if ($(window).width() > 767) {
+
+					var content = document.querySelector("#myslider1");
+
+					function scrollHorizontally(e) {
+						e = window.event || e;
+						var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+						TweenLite.to(content, 1.2, { ease: Power1.easeOut, scrollTo:{x:content.scrollLeft - (delta*1200)} });
+						// var arrivetoend = ($(window).width() - ($("#myslider1 li:last-child").offset().left ));
+						// if(arrivetoend>200)
+						// {
+						// 	$("#myslider1 li:last-child").addClass('active');
+						// }
+						// else
+						// {
+						// 	$("#myslider1 li:last-child").removeClass('active');
+						// }
+						e.preventDefault();
+					}
+					if (content.addEventListener) {
+						// IE9, Chrome, Safari, Opera
+						content.addEventListener("mousewheel", scrollHorizontally, false);
+						// Firefox
+						content.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+					} else {
+						// IE 6/7/8
+						content.attachEvent("onmousewheel", scrollHorizontally);
+					}
+				}
+
 		});
 
 	</script>
