@@ -83,73 +83,49 @@
 
 	<script>
 
+		$(window).on("load", function () {
+				if ($(window).width() > 767) {
+					var content1 = document.querySelector("#myslider1");
+					var mywidth3 = $(this).width() * 0.4;
+					
+					$('.go-right').on('click', function () {
+						TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft + mywidth3 } });
+					});
 
-		// $(window).on('wheel', function(event){
-		// 	if(event.originalEvent.deltaY < 0){
-		// 		$('#myslider1').moveleft();
-		// 	}
-		// 	else {
-		// 		$('#myslider1').moveright();
-		// 	}
-		// });
+					$('.go-left').on('click', function () {
+						TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft - mywidth3 } });
+					});
 
-		$(window).on("load", function() {
-			if ($(window).width() > 767) {
-				$('.go-right').on('click', function() {
-					$('#myslider1').moveright();
-				});
-
-				$('.go-left').on('click', function() {
-					$('#myslider1').moveleft();
-				});
-
-				$(document).keydown(function(e){
-					if (e.which == 37 || e.which == 38) { 
-						$('#myslider1').moveleft();
-						e.preventDefault();
-					}
-					if (e.which == 39 || e.which == 40) { 
-						$('#myslider1').moveright();
-						e.preventDefault();
-					}
-				});
-			}
-		});
-
-
-		$(window).on("load", function() {
-			if ($(window).width() > 767) {
-
-					var content = document.querySelector("#myslider1");
 
 					function scrollHorizontally(e) {
 						e = window.event || e;
 						var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-						console.log(delta);
-						TweenLite.to(content, 1.4, { ease: Power1.easeOut, scrollTo:{x:content.scrollLeft - (delta*580)} });
-						// var arrivetoend = ($(window).width() - ($("#myslider1 li:last-child").offset().left ));
-						// if(arrivetoend>200)
-						// {
-						// 	$("#myslider1 li:last-child").addClass('active');
-						// }
-						// else
-						// {
-						// 	$("#myslider1 li:last-child").removeClass('active');
-						// }
+						TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft - (delta * 380) } });
 						e.preventDefault();
 					}
-					if (content.addEventListener) {
+					if (content1.addEventListener) {
 						// IE9, Chrome, Safari, Opera
-						content.addEventListener("mousewheel", scrollHorizontally, false);
+						content1.addEventListener("mousewheel", scrollHorizontally, false);
 						// Firefox
-						content.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+						content1.addEventListener("DOMMouseScroll", scrollHorizontally, false);
 					} else {
 						// IE 6/7/8
-						content.attachEvent("onmousewheel", scrollHorizontally);
+						content1.attachEvent("onmousewheel", scrollHorizontally);
 					}
-				}
 
-		});
+
+					$(document).keydown(function (e) {
+						if (e.which == 37 || e.which == 38) {
+							TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft - mywidth3 } });
+							e.preventDefault();
+						}
+						if (e.which == 39 || e.which == 40) {
+							TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft + mywidth3 } });
+							e.preventDefault();
+						}
+					});
+				}
+			});
 
 	</script>
 
