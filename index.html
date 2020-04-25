@@ -101,7 +101,7 @@
 					function scrollHorizontally(e) {
 						e = window.event || e;
 						var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-						TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft - (delta * 380) } });
+						TweenLite.to(content1, 1.4, { ease: Power1.easeOut, scrollTo: { x: content1.scrollLeft - (delta * 480) } });
 						e.preventDefault();
 					}
 					if (content1.addEventListener) {
